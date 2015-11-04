@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+
+	<link rel="stylesheet" href="css/index.css">
+
+
+	<script type="text/javascript" src="lib/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="lib/angular/angular.js"></script>
+	<script type="text/javascript" src="lib/angular-animate/angular-animate.min.js"></script>
+	
+	<script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+	<script type="text/javascript" src="app.js"></script>
+	
+	<script type="text/javascript" src="js/wordTable/wordTable.js"></script>
+	<script type="text/javascript" src="js/symbolTable/symbolTable.js"></script>
+	<script type="text/javascript" src="js/tokenTable/tokenTable.js"></script>
+	<script type="text/javascript" src="js/lexicalAnalysis/lexicalAnalysis.js"></script>
+	<script type="text/javascript" src="js/grammaticalAnalysis/grammaticalAnalysis.js"></script>
+	<script type="text/javascript" src="directive/directive.js"></script>
+
+
+</head>
+
+<body ng-app="app" ng-controller="appCtr">
+	<div class="container">
+		<code-show ng-model="code"></code-show>
+	</div>
+</body>
+
+</html>

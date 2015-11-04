@@ -1,0 +1,93 @@
+@charset "utf-8";
+@keyframes blink-caret {
+  50% {
+    border-color: #ffffff !important;
+  }
+}
+@keyframes turn-run {
+  to {
+    transform: rotateY(15deg);
+    -webkit-transform: rotateY(15deg);
+    /* Safari 和 Chrome */
+    -moz-transform: rotateY(15deg);
+    transform: skewY(1deg);
+    -webkit-transform: skewY(1deg);
+    /* Safari 和 Chrome */
+    -moz-transform: skewY(1deg);
+  }
+}
+.noShow {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+.code .codeContent {
+  width: 45%;
+  background-color: black;
+  color: white;
+  padding: 1em 2em;
+  box-shadow: 10px 10px 5px #888888;
+  margin-top: 35px;
+  position: fixed;
+  height: 600px;
+  overflow: auto;
+  transition: all 2s;
+  -moz-transition: all 2s;
+  /* Firefox 4 */
+  -webkit-transition: all 2s;
+  /* Safari 和 Chrome */
+  -o-transition: all 2s;
+  animation: turn-run 2s linear forwards;
+}
+.code .codeContent .codeSpan {
+  float: left;
+  display: inline-block;
+  display: block;
+  width: 1ch;
+  height: 1em;
+  /*overflow: hidden;*/
+  white-space: nowrap;
+  font: bold 0.5em Consolas,Monaco,monospace;
+}
+.code .codeContent .codeSpanError {
+  color: red !important;
+}
+.code table .ng-enter {
+  animation: clockwise-rotation 1s linear;
+}
+.code .tit {
+  text-align: center;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+@keyframes clockwise-rotation {
+  from {
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    /* Safari 和 Chrome */
+    -moz-transform: rotateY(-180deg);
+  }
+  to {
+    transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+    /* Safari 和 Chrome */
+    -moz-transform: rotateY(0);
+  }
+}
+/*# sourceMappingURL=index.css.map */

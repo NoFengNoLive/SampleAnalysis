@@ -1,0 +1,95 @@
+@charset "utf-8";
+@import "lib/css3";
+@import "lib/z";
+
+
+@keyframes blink-caret { 50% { border-color: white !important} }
+
+@keyframes turn-run { 
+	to{
+		transform: rotateY(15deg);
+		-webkit-transform: rotateY(15deg);	/* Safari 和 Chrome */
+		-moz-transform: rotateY(15deg);
+		
+		transform: skewY(1deg);
+		-webkit-transform: skewY(1deg);	/* Safari 和 Chrome */
+		-moz-transform: skewY(1deg);
+	}
+}
+	
+
+
+.noShow{
+	width:100%;
+	height:100%;
+	 opacity:0;
+	filter:alpha(opacity=0);
+	cursor:pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9;
+}        
+.code{
+	.codeContent { 
+		width:45%;
+		background-color:black;
+		color:white;
+		padding:1em 2em;
+		box-shadow: 10px 10px 5px #888888;	
+		margin-top:35px;
+		position:fixed;
+		height:600px;
+		overflow: auto;
+		
+		transition: all 2s;
+		-moz-transition: all 2s;	/* Firefox 4 */
+		-webkit-transition: all 2s;	/* Safari 和 Chrome */
+		-o-transition: all 2s;
+		
+		animation:turn-run 2s linear forwards;
+			
+		.codeSpan {
+			// border-right:.2em solid transparent;
+			float:left;	
+			display: inline-block;
+			display:block;
+			width:1ch;
+			height:1em;
+			/*overflow: hidden;*/
+			white-space: nowrap;
+			font:bold 0.5em Consolas,Monaco,monospace;
+			// animation:blink-caret 50 step-end 1 alternate;
+		}
+		.codeSpanError{
+			color:red !important;
+		}
+	}
+	table{
+		.ng-enter{
+			animation: clockwise-rotation 1s linear;
+		}
+	}
+	.tit{
+		text-align: center;
+	}
+}
+.clearfix { 
+	.clearfix();
+}
+
+@keyframes clockwise-rotation{
+	from{
+		transform: rotateY(-180deg);
+		-webkit-transform: rotateY(-180deg);	/* Safari 和 Chrome */
+		-moz-transform: rotateY(-180deg);
+	}
+	to{
+		transform: rotateY(0);
+		-webkit-transform: rotateY(0);	/* Safari 和 Chrome */
+		-moz-transform: rotateY(0);
+	}
+}
+
+
+
